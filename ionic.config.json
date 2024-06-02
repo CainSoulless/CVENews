@@ -1,0 +1,7 @@
+{
+  "name": "CVENews2",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
