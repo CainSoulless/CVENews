@@ -25,3 +25,40 @@
 #container a {
   text-decoration: none;
 }
+
+ion-item[slot="header"] {
+  cursor: pointer;
+  --inner-padding-end: 0;
+  --inner-padding-start: 0;
+}
+
+ion-icon[slot="end"] {
+  transition: color 0.3s;
+  color: var(--ion-color-medium);
+}
+
+ion-icon[slot="end"][name="star"] {
+  color: var(--ion-color-warning);
+}
+
+div[slot="content"] {
+  padding: 1rem;
+}
+
+.favorite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ion-item-inner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start; 
+}
+
+.favorite-id {
+  margin-right: 10px;
+}

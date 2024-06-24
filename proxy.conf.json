@@ -1,0 +1,11 @@
+{
+  "/api": {
+    "target": "https://cve.circl.lu",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {
+      "Access-Control-Allow-Origin": "*"
+    }
+  }
+}
