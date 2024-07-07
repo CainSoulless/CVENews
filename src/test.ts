@@ -7,8 +7,30 @@ import {
   platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-// First, initialize the Angular testing environment.
+declare const require: {
+  context(path: string, deep?: boolean, filter?: RegExp): {
+    keys(): string[];
+    <T>(id: string): T;
+  };
+};
+
 getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
-  platformBrowserDynamicTesting(),
+  platformBrowserDynamicTesting()
 );
+
+const context = require.context('./', true, /\.spec\.ts$/);
+context.keys().map(context);
+
+// import 'zone.js/testing';
+// import { getTestBed } from '@angular/core/testing';
+// import {
+//   BrowserDynamicTestingModule,
+//   platformBrowserDynamicTesting
+// } from '@angular/platform-browser-dynamic/testing';
+
+// // First, initialize the Angular testing environment.
+// getTestBed().initTestEnvironment(
+//   BrowserDynamicTestingModule,
+//   platformBrowserDynamicTesting(),
+// );
